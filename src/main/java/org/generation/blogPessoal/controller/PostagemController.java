@@ -17,19 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 //enables automatic dependency injection.
 
 @RestController
-@RequestMapping("/postagens ")
-@CrossOrigin("*")
-
+@RequestMapping("/postagens")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemController {
- 
+
 	@Autowired
-    private PostagemRepository repository;
-    
+	private PostagemRepository repository;
+
 	@GetMapping
-	public ResponseEntity<List<Postagem>> GetAll(){
+	public ResponseEntity<List<Postagem>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
-		
+
 	}
-	
 
 }
