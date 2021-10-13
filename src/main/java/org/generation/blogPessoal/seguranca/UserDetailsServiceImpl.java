@@ -1,4 +1,4 @@
-package org.generation.blogPessoal.securanca;
+package org.generation.blogPessoal.seguranca;
 
 import java.util.Optional;
 
